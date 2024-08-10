@@ -1,0 +1,45 @@
+{
+  "configurations" : [
+    {
+      "id" : "2A79E7C5-6686-4B7F-9A1F-33F199C86BAD",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:",
+          "identifier" : "JTNetworkModule_End_To_End_Tests",
+          "name" : "JTNetworkModule_End_To_End_Tests"
+        },
+        {
+          "containerPath" : "container:",
+          "identifier" : "JTNetworkModule_Unit_Tests",
+          "name" : "JTNetworkModule_Unit_Tests"
+        }
+      ]
+    },
+    "testExecutionOrdering" : "random"
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "JTNetworkModule_End_To_End_Tests",
+        "name" : "JTNetworkModule_End_To_End_Tests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "JTNetworkModule_Unit_Tests",
+        "name" : "JTNetworkModule_Unit_Tests"
+      }
+    }
+  ],
+  "version" : 1
+}
