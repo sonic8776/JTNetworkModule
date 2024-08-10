@@ -17,7 +17,10 @@ let package = Package(
         .target(
             name: "JTNetworkModule"),
         .testTarget(
-            name: "JTNetworkModuleTests",
+            name: "JTNetworkModule_Unit_Tests",
+            dependencies: ["JTNetworkModule"]),
+        .testTarget(
+            name: "JTNetworkModule_End_To_End_Tests",
             dependencies: ["JTNetworkModule"]),
     ]
 )
