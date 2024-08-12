@@ -7,12 +7,12 @@
 
 import Foundation
 
-enum HTTPMethod: String {
+public enum HTTPMethod: String {
     case get = "GET"
     case post = "POST"
 }
 
-protocol RequestType {
+public protocol RequestType {
     var baseURL: URL { get } // domain URL https://crypto.com
     var path: String { get } // /userLogin
     var queryItems: [URLQueryItem] { get set } // https://crypto.com/userLogin?account=judy&passwork=1234
@@ -23,7 +23,7 @@ protocol RequestType {
     var urlRequest: URLRequest { get } // final
 }
 
-extension RequestType {
+public extension RequestType {
     var fullURL: URL {
         // Builder pattern 可以再被修改 / factory 創建好不能再被修改
         var components = URLComponents(url: baseURL, resolvingAgainstBaseURL: false)

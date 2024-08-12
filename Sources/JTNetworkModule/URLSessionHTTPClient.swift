@@ -7,14 +7,14 @@
 
 import Foundation
 
-class URLSessionHTTPClient: HTTPClient {
+public class URLSessionHTTPClient: HTTPClient {
     let session: URLSession
     
-    init(session: URLSession) {
+    public init(session: URLSession) {
         self.session = session
     }
    
-    func request(withRequestType requestType: RequestType, completion: @escaping (Result<(Data, HTTPURLResponse), HTTPClientError>) -> Void) {
+    public func request(withRequestType requestType: RequestType, completion: @escaping (Result<(Data, HTTPURLResponse), HTTPClientError>) -> Void) {
         session.dataTask(with: requestType.urlRequest) { data, response, error in
             if let error {
                 completion(.failure(.networkError))

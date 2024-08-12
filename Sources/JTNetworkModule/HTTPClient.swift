@@ -7,13 +7,13 @@
 
 import Foundation
 
-enum HTTPClientError: Error {
+public enum HTTPClientError: Error {
     case networkError
     case cannotFindDataOrResponse
     
     
 }
 
-protocol HTTPClient {
+public protocol HTTPClient {
     func request(withRequestType requestType: RequestType, completion: @escaping (Result<(Data, HTTPURLResponse), HTTPClientError>) -> Void)
 }
